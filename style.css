@@ -22,3 +22,7 @@ p{
 .leaflet-container {
   background: #b8d1ff;
 }
+
+#map-frame{
+  height: 740px;
+}
