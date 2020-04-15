@@ -53,12 +53,14 @@
       // resize map based on width
       window.addEventListener('resize', function(event){
         var width = document.documentElement.clientWidth;
-
+        var bar = document.getElementById("info-pane");
         if (width < 768){
           map.setZoom(4.05);
+          bar.style.display = "none";
         }
         else{
           map.setZoom(4.8);
+          bar.style.display = "block";
         }
       });
 
