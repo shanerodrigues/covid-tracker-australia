@@ -55,25 +55,29 @@
         var width = document.documentElement.clientWidth;
         var bar = document.getElementById("info-pane");
         if (width < 768){
-          map.setZoom(4.05);
+          map.setZoom(3.4);
           bar.style.display = "none";
         }
         else{
           map.setZoom(4.8);
           bar.style.display = "block";
+          bar.style.height = '160px';
         }
       });
 
       window.addEventListener('DOMContentLoaded', function(event){
         var width = document.documentElement.clientWidth;
         var bar = document.getElementById("info-pane");
+        var mapWidth = document.getElementById("info-pane");
         if (width < 768){
-          map.setZoom(4.05);
+          map.setZoom(3.4);
           bar.style.display = "none";
+          mapWidth = mapWidth.style.height = '500px';
         }
         else{
           map.setZoom(4.8);
           bar.style.display = "block";
+          bar.style.height = "160px";
         }
       });
 

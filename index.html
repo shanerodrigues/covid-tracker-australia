@@ -22,6 +22,32 @@
 
         </div>
         <iframe height= 740px width= 100% src="map.html" frameborder="0"></iframe>
+        <script>
+            window.addEventListener('resize', function (event) {
+                var width = document.documentElement.clientWidth;
+                var iFrameWidth = document.getElementById('map-frame');
+                // 768
+                if (width < 1012) {
+                    iFrameWidth.style.height = '450px';
+                }
+                else {
+                    iFrameWidth.style.height = '900px';
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', function (event) {
+                var width = document.documentElement.clientWidth;
+                var iFrameWidth = document.getElementById('map-frame');
+                if (width < 1012) {
+                    iFrameWidth.style.height = '450px';
+
+                }
+                else {
+                    //iFrameWidth.style.height = '900px';
+                }
+            });
+        </script>
+        
         <table id="table-data"class="table table-hover mt-5">
             <thead>
                 <tr>
