@@ -64,6 +64,19 @@
         }
       });
 
+      window.addEventListener('DOMContentLoaded', function(event){
+        var width = document.documentElement.clientWidth;
+        var bar = document.getElementById("info-pane");
+        if (width < 768){
+          map.setZoom(4.05);
+          bar.style.display = "none";
+        }
+        else{
+          map.setZoom(4.8);
+          bar.style.display = "block";
+        }
+      });
+
 
       // Retrieving covid data to implement into Leaflet
       var stateData = [];
