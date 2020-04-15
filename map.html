@@ -50,6 +50,19 @@
         'opacity': 1
       };
       
+      // resize map based on width
+      window.addEventListener('resize', function(event){
+        var width = document.documentElement.clientWidth;
+
+        if (width < 768){
+          map.setZoom(4.05);
+        }
+        else{
+          map.setZoom(4.8);
+        }
+      });
+
+
       // Retrieving covid data to implement into Leaflet
       var stateData = [];
         $.ajax({
@@ -122,6 +135,10 @@
               layer.on("click", function (e) {
                   stateLayer.setStyle(style,{interactive: false}); //resets layer colors
                   layer.setStyle(highlight);  //highlights selected.
+              });
+
+              layer.on("popupclose", function(e){
+                stateLayer.setStyle(style,{interactive: false});
               });
               
             }
