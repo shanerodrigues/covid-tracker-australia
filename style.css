@@ -26,3 +26,9 @@ p{
 #map-frame{
   height: 740px;
 }
+
+#covid-V{
+  font-weight: 850;
+  color: #51A2DA;
+  display: inline;
+}
