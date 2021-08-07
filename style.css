@@ -24,11 +24,57 @@ p{
 }
 
 #map-frame{
-  height: 740px;
+  height: 500px;
 }
 
 #covid-V{
   font-weight: 850;
   color: #51A2DA;
   display: inline;
+}
+
+#box{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+#confirmed, #recovered, #deaths{
+  font-size: 24px;
+}
+
+#confirmed{
+  color: orange;
+  font-weight: 500;
+}
+
+#recovered{
+  color: green;
+  font-weight: 500;
+}
+
+#deaths{
+  color: red;
+  font-weight: 500;
+}
+
+#new-confirmed, #new-recovered, #new-deaths{
+  font-weight: 500;
+}
+
+#confirmed-card, #recovered-card, #deaths-card{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5%;
+  border: none;
+  padding: 12px;
+  background: white;
+  text-align: center;
+}
+
+#new-confirmed-box, #new-recovered-box, #new-deaths-box{
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
 }

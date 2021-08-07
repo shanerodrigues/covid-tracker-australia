@@ -1,6 +1,9 @@
 # COVID-19 Tracker for Australia
 
-This displays COVID-19 data for Australia. The data is presented in a tabular form separated by states. There is also a map component, where if you hover over a particular state, its data is displayed.
+This displays COVID-19 data for Australia. 
+- It shows the current confirmed cases, recovered cases and number of deaths.
+- There is a map component in which hovering over a particular state, shows the current confirmed, recovered and number of deaths.
+- At the bottom the current confirmed, recovered and number of deaths is is presented in a tabular form separated by states. 
 
 ## References
 
@@ -8,4 +11,4 @@ Data is sourced from [Johns Hopkins University CSSE](https://www.arcgis.com/apps
 
 Map made using [Leaflet](https://leafletjs.com/)
 
-API: [Corona-API by adhambadr](https://github.com/adhambadr/corona-api)
+API: [Covid19API by Kyle Redelinghuys](https://covid19api.com/)
