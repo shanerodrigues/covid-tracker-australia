@@ -6,21 +6,7 @@ fetch(url)
 }).catch(err => console.error(err));
 */
 
-//Fetches country info
-
-let x = 0;
-let y;
-
-// async function getCountryInfo(url) {
-//   await fetch(url)
-//     .then((res) => res.json())
-//     .then((out) => {
-//       document.getElementById("confirmed").innerHTML = out.confirmed.value;
-//       document.getElementById("recovered").innerHTML = out.recovered.value;
-//       document.getElementById("deaths").innerHTML = out.deaths.value;
-//     })
-//     .catch((err) => console.error(err));
-// }
+//Fetches info of Australia as a whole including new confirmed, recovered and number of deaths
 
 async function getCountryInfo(url) {
   await fetch(url)
@@ -83,26 +69,11 @@ async function getCountryInfo(url) {
         document.getElementById("no-new-deaths").innerHTML =
           "No new cases in the past day";
       }
-      // document.getElementById(
-      //   "new-confirmed"
-      // ).innerHTML = `+${out.Countries[8].NewConfirmed} in the past day`;
-      // if (Number(out.Countries[8].NewRecovered) === 0) {
-      //   document.getElementById("new-recovered").innerHTML =
-      //     "No new recovered cases";
-      // } else if (Number(out.Countries[8].NewRecovered) > 0) {
-      //   document.getElementById(
-      //     "new-recovered"
-      //   ).innerHTML = `+${out.Countries[8].NewRecovered} in the past day`;
-      // }
-      // document.getElementById(
-      //   "new-deaths"
-      // ).innerHTML = `+${out.Countries[8].NewDeaths} in the past day`;
-      // document.getElementById(
-      //   "new-deaths"
-      // ).innerHTML = `+${out.Countries[8].NewDeaths} in the past day`;
     })
     .catch((err) => console.error(err));
 }
+
+//Fetches info of each state of Australia
 
 async function getStateInfo(url) {
   await fetch(url)
@@ -214,9 +185,7 @@ let previousDay = new Date();
 previousDay.setDate(previousDay.getDate() - 1);
 previousDay = previousDay.toISOString().split("T")[0];
 
-// let url = "https://covid19.mathdro.id/api/countries/Australia/confirmed";
-// let countryDetails = "https://covid19.mathdro.id/api/countries/Australia";
-
+//API URLs
 let countryDetails = "https://api.covid19api.com/summary";
 let stateDetails = `https://api.covid19api.com/live/country/australia/status/confirmed/date/${previousDay}`;
 console.log(stateDetails);
@@ -225,23 +194,3 @@ document.addEventListener("DOMContentLoaded", function () {
   getCountryInfo(countryDetails);
   getStateInfo(stateDetails);
 });
-
-// IMPORTANT
-// Getting data from here https://documenter.getpostman.com/view/10808728/SzS8rjbc#7934d316-f751-4914-9909-39f1901caeb8
-// For country info, use the Summary link
-// https://api.covid19api.com/summary
-// and access 8th it will look like this
-//   ID : "70ffb3ed-6b3b-42a4-af06-d4c0648aeda0"
-//   Country : "Australia"
-//   CountryCode : "AU"
-//   Slug : "australia"
-//   NewConfirmed : 302
-//   TotalConfirmed : 35391
-//   NewDeaths : 5
-//   TotalDeaths : 932
-//   NewRecovered : 31
-//   TotalRecovered : 24203
-//   Date : "2021-08-06T02:18:21.683Z"
-// For state info use the live by country and status
-// https://api.covid19api.com/live/country/australia/status/confirmed/date/2021-08-5
-// But make sure you put in the date one day before to not access a lot of data
