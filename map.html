@@ -47,9 +47,6 @@
       // setting up geojson data and getting covid data
       var url =
         "https://raw.githubusercontent.com/shanerodrigues/GeoJson-Data/master/australian-states.min.geojson";
-      // var covidData = 'https://corona.blloc.com/current?country=Australia';
-      // let covidData =
-      //   "https://covid19.mathdro.id/api/countries/Australia/confirmed";
       let previousDay = new Date();
       previousDay.setDate(previousDay.getDate() - 1);
       previousDay = previousDay.toISOString().split("T")[0];
@@ -343,7 +340,6 @@
               "<p> Deaths: " +
               stateData[i].Deaths;
           }
-          // popupContent = `${stateData[3].Confirmed} is this`;
         }
 
         layer.bindPopup(popupContent);

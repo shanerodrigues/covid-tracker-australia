@@ -188,7 +188,19 @@ previousDay = previousDay.toISOString().split("T")[0];
 //API URLs
 let countryDetails = "https://api.covid19api.com/summary";
 let stateDetails = `https://api.covid19api.com/live/country/australia/status/confirmed/date/${previousDay}`;
-console.log(stateDetails);
+
+//Set last updated
+let lastUpdt = document.getElementById("last-updated");
+let theDate = document.createElement("span");
+let lastUpdtText = document.createElement("span");
+let prevDay = new Date();
+prevDay.setDate(prevDay.getDate() - 1);
+let text = prevDay.toDateString();
+lastUpdtText.textContent = "Last updated: ";
+theDate.style.fontWeight = "bold";
+theDate.textContent = `${text}`;
+lastUpdt.appendChild(lastUpdtText);
+lastUpdt.appendChild(theDate);
 
 document.addEventListener("DOMContentLoaded", function () {
   getCountryInfo(countryDetails);
