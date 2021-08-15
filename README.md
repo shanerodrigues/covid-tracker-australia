@@ -1,5 +1,7 @@
 # COVID-19 Tracker for Australia
 
+![COVID-19 Tracker Demo](demo/demo.gif)
+
 This website displays COVID-19 data for Australia. 
 - It shows the current confirmed cases, recovered cases and number of deaths for Australia as a whole.
 - There is a map component in which hovering over a particular state, shows the current confirmed cases and number of deaths.
