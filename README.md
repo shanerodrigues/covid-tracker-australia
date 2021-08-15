@@ -11,4 +11,4 @@ Data is sourced from [Johns Hopkins University CSSE](https://www.arcgis.com/apps
 
 Map made using [Leaflet](https://leafletjs.com/)
 
-API: [Covid19API by Kyle Redelinghuys](https://covid19api.com/)
+API: [Covid19API by Kyle Redelinghuys](https://covid19api.com/) [disease-sh](https://github.com/disease-sh/api)
